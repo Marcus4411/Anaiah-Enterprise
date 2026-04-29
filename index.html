@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anaiah Enterprise | We Plan. We Design. We Build.</title>
+  <meta name="description"
+    content="Anaiah Enterprise — Your trusted construction partner in Mongu. We offer house planning, renovating, roof designing, painting, and more. Don't just dream about it, make it real with us." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
+            <circle cx="20" cy="20" r="20" fill="#C9A84C" />
+            <path d="M20 8 C16 12 12 14 12 20 C12 26 15 30 20 32 C25 30 28 26 28 20 C28 14 24 12 20 8Z" fill="#0D1B3E"
+              opacity="0.9" />
+            <path d="M17 16 Q20 10 23 16 L22 18 Q20 14 18 18Z" fill="#C9A84C" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">ANAIAH</span>
+          <span class="logo-sub">ENTERPRISE</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="hero.png" alt="Modern luxury home built by Anaiah Enterprise" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">Your Dream Home, Our Expertise</div>
+      <h1 class="hero-title reveal">
+        We Plan.<br />
+        We Design.<br />
+        <span class="hero-title-gold">We Build.</span>
+      </h1>
+      <blockquote class="hero-quote reveal">
+        <span class="quote-mark">"</span>
+        Don't just dream about it —
+        <em class="gold">make it real</em> with us.
+        <span class="quote-mark">"</span>
+      </blockquote>
+      <div class="hero-actions reveal">
+        <a href="#services" class="btn btn-gold">Explore Services</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">What We Offer</div>
+        <h2 class="section-title">Our <span class="gold">Services</span></h2>
+        <p class="section-sub">From blueprints to the finishing touch — we handle every phase of your construction
+          journey with precision and care.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal" id="svc-planning">
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="8" width="36" height="32" rx="3" stroke="currentColor" stroke-width="2.5" />
+              <path d="M14 18h20M14 24h20M14 30h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M6 14h36" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="11" cy="11" r="1.5" fill="currentColor" />
+              <circle cx="16" cy="11" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="service-name">House Planning</h3>
+          <p class="service-desc">Customized floor plans designed to match your lifestyle and needs. We turn your vision
+            into precise, buildable blueprints.</p>
+          <div class="service-img-wrap">
+            <img src="svc_planning.png" alt="Architectural blueprints and floor plans" class="service-img" />
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="svc-renovating">
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+              <path d="M24 8 L38 20 L38 40 L10 40 L10 20 Z" stroke="currentColor" stroke-width="2.5"
+                stroke-linejoin="round" />
+              <path d="M18 40 V28 H30 V40" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M18 8 L24 4 L30 8" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M10 20 L4 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M38 20 L44 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="service-name">Renovating</h3>
+          <p class="service-desc">Breathe new life into your space with our renovation experts. We upgrade your existing
+            home to modern standards beautifully.</p>
+          <div class="service-img-wrap">
+            <img src="svc_renovating.png" alt="Home renovation in progress" class="service-img" />
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="svc-roof">
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+              <path d="M6 24 L24 8 L42 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M10 24 L10 40 L38 40 L38 24" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M6 24 L42 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M17 30 L17 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M31 30 L31 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="service-name">Roof Designing</h3>
+          <p class="service-desc">Stylish, durable and weather resistant roof designs that protect your home while
+            enhancing its architectural beauty.</p>
+          <div class="service-img-wrap">
+            <img src="svc_roofing.png" alt="Modern roof being constructed" class="service-img" />
+          </div>
+        </div>
+
+        <div class="service-card reveal" id="svc-painting">
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+              <path
+                d="M12 36 C12 36 8 32 8 28 C8 22 13 18 18 18 L18 12 C18 10 20 8 22 8 L30 8 C32 8 34 10 34 12 L34 20 C38 22 40 26 40 30 C40 36 36 40 30 40"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M22 18 L22 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M26 18 L26 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <ellipse cx="20" cy="38" rx="8" ry="4" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </div>
+          <h3 class="service-name">Painting</h3>
+          <p class="service-desc">High quality painting services for a perfect and long lasting finish. Interior and
+            exterior solutions with premium paints.</p>
+          <div class="service-img-wrap">
+            <img src="svc_painting.png" alt="Professional wall painting service" class="service-img" />
+          </div>
+        </div>
+
+        <div class="service-card service-card--wide reveal" id="svc-other">
+          <div class="service-icon-wrap">
+            <svg class="service-icon" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5" />
+              <path d="M24 16 L24 24 L30 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="24" cy="24" r="2" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="service-other-content">
+            <h3 class="service-name">Other Services</h3>
+            <p class="service-desc">A full suite of construction solutions including:</p>
+            <ul class="service-list">
+              <li>General Construction</li>
+              <li>Interior Design</li>
+              <li>Electrical Works</li>
+              <li>Plumbing</li>
+              <li>Tiling & Flooring</li>
+              <li>Landscaping</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section class="why-us" id="why-us">
+    <div class="why-us-bg"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Our Promise</div>
+        <h2 class="section-title why-title">Why Choose <span class="gold">Us?</span></h2>
+      </div>
+      <div class="why-grid">
+
+        <div class="why-card reveal" id="why-quality">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="why-icon">
+              <path d="M24 6 L28 18 L42 18 L31 26 L35 38 L24 30 L13 38 L17 26 L6 18 L20 18 Z" stroke="currentColor"
+                stroke-width="2.5" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="why-title-card">Quality Materials</h3>
+          <p class="why-desc">We use only the best construction materials sourced from trusted suppliers to ensure long
+            lasting, beautiful results.</p>
+        </div>
+
+        <div class="why-card reveal" id="why-team">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="why-icon">
+              <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2.5" />
+              <path d="M10 40 C10 33 16 28 24 28 C32 28 38 33 38 40" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <circle cx="12" cy="18" r="5" stroke="currentColor" stroke-width="2" />
+              <circle cx="36" cy="18" r="5" stroke="currentColor" stroke-width="2" />
+              <path d="M4 40 C4 35 8 31 12 31" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M44 40 C44 35 40 31 36 31" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="why-title-card">Expert Team</h3>
+          <p class="why-desc">Skilled professionals with years of hands-on experience. Our team brings passion and
+            precision to every single project.</p>
+        </div>
+
+        <div class="why-card reveal" id="why-delivery">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="why-icon">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5" />
+              <path d="M24 12 L24 24 L32 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="why-title-card">On Time Delivery</h3>
+          <p class="why-desc">We value your time and always deliver on schedule. Transparent timelines and regular
+            progress updates keep you informed.</p>
+        </div>
+
+        <div class="why-card reveal" id="why-satisfaction">
+          <div class="why-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="why-icon">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5" />
+              <path d="M16 28 C18 32 22 34 24 34 C26 34 30 32 32 28" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" />
+              <circle cx="18" cy="20" r="2" fill="currentColor" />
+              <circle cx="30" cy="20" r="2" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="why-title-card">Customer Satisfaction</h3>
+          <p class="why-desc">Your satisfaction is our top priority. We go above and beyond to ensure every client is
+            thrilled with the final result.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner reveal">
+        <div class="cta-text">
+          <p class="cta-small">Ready to start?</p>
+          <h3 class="cta-headline">Let's Build Something <span class="gold-script">Amazing</span></h3>
+        </div>
+        <a href="#contact" class="btn btn-gold btn-lg">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Contact <span class="gold">Us</span></h2>
+        <p class="section-sub">Ready to build your dream home? Reach out to us today and let's start planning your
+          project.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item" id="contact-phone">
+            <div class="contact-icon-wrap">
+              <svg viewBox="0 0 48 48" fill="none" class="contact-icon">
+                <path
+                  d="M10 8 C10 8 14 8 16 12 L18 18 C18 20 17 21 15 23 C13 25 18 30 20 32 C22 34 27 39 29 37 C31 35 32 34 34 34 L40 36 C44 38 44 42 44 42 C44 42 42 46 38 46 C24 46 2 24 2 10 C2 6 6 4 6 4 Z"
+                  stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Call Us Now</span>
+              <a href="tel:0971627899" class="contact-value">0971 627 899</a>
+            </div>
+          </div>
+
+          <div class="contact-item" id="contact-email">
+            <div class="contact-icon-wrap">
+              <svg viewBox="0 0 48 48" fill="none" class="contact-icon">
+                <rect x="4" y="10" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2.5" />
+                <path d="M4 16 L24 28 L44 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Email Us</span>
+              <a href="mailto:mututwas@gmail.com" class="contact-value">mututwas@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item" id="contact-location">
+            <div class="contact-icon-wrap">
+              <svg viewBox="0 0 48 48" fill="none" class="contact-icon">
+                <path d="M24 4 C16 4 10 10 10 18 C10 30 24 44 24 44 C24 44 38 30 38 18 C38 10 32 4 24 4Z"
+                  stroke="currentColor" stroke-width="2.5" />
+                <circle cx="24" cy="18" r="6" stroke="currentColor" stroke-width="2.5" />
+              </svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Our Location</span>
+              <span class="contact-value">Mongu, Zambia</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/260971627899?text=Hello%20Anaiah%20Enterprise%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener noreferrer" class="contact-item contact-item--whatsapp" id="contact-whatsapp">
+            <div class="contact-icon-wrap contact-icon-wrap--whatsapp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" class="contact-icon">
+                <defs><linearGradient id="wa-grad-a" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#57d163"/><stop offset="1" stop-color="#23b33a"/></linearGradient></defs>
+                <path fill="url(#wa-grad-a)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535L26 150.55l32.181-8.851a61.015 61.015 0 0 0 29.003 7.348h.026c33.755 0 61.189-27.426 61.205-61.153a60.747 60.747 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.336-17.416z"/>
+                <path fill="#fff" fill-rule="evenodd" d="M100.938 107.34c-.677 1.088-2.059 1.744-3.494 1.744-1.044 0-2.15-.312-3.443-1.006-5.29-2.842-9.504-6.304-12.876-10.58-1.664-2.097-2.788-4.128-3.34-6.036-.455-1.564-.373-3.086.223-4.308.508-1.058 1.386-1.852 2.267-2.62.29-.253.571-.499.832-.748.612-.584.927-1.286.927-2.087 0-.489-.14-.981-.421-1.504-.508-.944-3.107-7.49-3.683-8.77-.5-1.126-1.145-1.693-1.971-1.73h-.187c-.641 0-1.3.248-1.944.737-.938.706-3.652 3.5-3.652 8.526 0 4.74 3.042 9.167 4.47 11.06.058.077.15.21.278.394C80.606 101.85 89.1 111.74 98.78 115.6c1.48.574 2.727.918 3.832 1.17 1.655.376 3.16.323 4.47-.158 2.114-.776 3.528-2.52 4.08-5.077.19-.879.118-1.793-.204-2.543-.537-1.25-1.83-1.931-3.044-2.508a53.916 53.916 0 0 1-.734-.363c-.886-.45-1.687-.713-2.449-.713-.932 0-1.708.392-2.793 1.932z"/>
+              </svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Chat on WhatsApp</span>
+              <span class="contact-value">+260 971 627 899</span>
+            </div>
+            <span class="wa-badge">Open Chat</span>
+          </a>
+
+          <div class="contact-quote">
+            <p>"Don't just dream about it — <em class="gold">make it real</em> with us."</p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 0971 000 000" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="planning">House Planning</option>
+              <option value="renovating">Renovating</option>
+              <option value="roof">Roof Designing</option>
+              <option value="painting">Painting</option>
+              <option value="other">Other Services</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-whatsapp btn-submit" id="submitBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" width="22" height="22">
+              <defs><linearGradient id="wa-grad-b" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e8e8e8"/></linearGradient></defs>
+              <path fill="url(#wa-grad-b)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535L26 150.55l32.181-8.851a61.015 61.015 0 0 0 29.003 7.348h.026c33.755 0 61.189-27.426 61.205-61.153a60.747 60.747 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.336-17.416z"/>
+              <path fill="#25D366" fill-rule="evenodd" d="M100.938 107.34c-.677 1.088-2.059 1.744-3.494 1.744-1.044 0-2.15-.312-3.443-1.006-5.29-2.842-9.504-6.304-12.876-10.58-1.664-2.097-2.788-4.128-3.34-6.036-.455-1.564-.373-3.086.223-4.308.508-1.058 1.386-1.852 2.267-2.62.29-.253.571-.499.832-.748.612-.584.927-1.286.927-2.087 0-.489-.14-.981-.421-1.504-.508-.944-3.107-7.49-3.683-8.77-.5-1.126-1.145-1.693-1.971-1.73h-.187c-.641 0-1.3.248-1.944.737-.938.706-3.652 3.5-3.652 8.526 0 4.74 3.042 9.167 4.47 11.06.058.077.15.21.278.394C80.606 101.85 89.1 111.74 98.78 115.6c1.48.574 2.727.918 3.832 1.17 1.655.376 3.16.323 4.47-.158 2.114-.776 3.528-2.52 4.08-5.077.19-.879.118-1.793-.204-2.543-.537-1.25-1.83-1.931-3.044-2.508a53.916 53.916 0 0 1-.734-.363c-.886-.45-1.687-.713-2.449-.713-.932 0-1.708.392-2.793 1.932z"/>
+            </svg>
+            <span>Send via WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-icon logo-icon--sm">
+            <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
+              <circle cx="20" cy="20" r="20" fill="#C9A84C" />
+              <path d="M20 8 C16 12 12 14 12 20 C12 26 15 30 20 32 C25 30 28 26 28 20 C28 14 24 12 20 8Z" fill="#0D1B3E"
+                opacity="0.9" />
+              <path d="M17 16 Q20 10 23 16 L22 18 Q20 14 18 18Z" fill="#C9A84C" />
+            </svg>
+          </div>
+          <div>
+            <p class="footer-name">ANAIAH ENTERPRISE</p>
+            <p class="footer-tagline">We Plan. We Design. We Build.</p>
+          </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Anaiah Enterprise. All rights reserved. · Mongu, Zambia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
