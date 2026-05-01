@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Anaiah Enterprise logo</title>
+  <desc id="logoDesc">Circular blue emblem with green leaves and Anaiah Enterprise text</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1B3E"/>
+      <stop offset="100%" stop-color="#122344"/>
+    </linearGradient>
+    <linearGradient id="leafGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8CC84C"/>
+      <stop offset="100%" stop-color="#4AA039"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="url(#bgGradient)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="4"/>
+  <path d="M100 48 C90 48 78 60 78 78 C78 96 88 110 100 118 C112 110 122 96 122 78 C122 60 110 48 100 48 Z" fill="#99D344"/>
+  <path d="M100 104 C95 84 88 72 72 62" stroke="#8CC84C" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M100 104 C105 84 112 72 128 62" stroke="#8CC84C" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M100 78 L100 18" stroke="#A8E35A" stroke-width="16" stroke-linecap="round"/>
+  <path d="M80 52 C70 40 68 24 86 18" stroke="#A8E35A" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M120 52 C130 40 132 24 114 18" stroke="#A8E35A" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <text x="100" y="148" text-anchor="middle" font-family="Outfit, Arial, Helvetica, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="0.1em">ANAIAH</text>
+  <text x="100" y="170" text-anchor="middle" font-family="Outfit, Arial, Helvetica, sans-serif" font-weight="600" font-size="12" fill="#C9A84C" letter-spacing="0.2em">ENTERPRISE</text>
+  <path d="M96 183 L100 189 L104 183 L110 183 L104 179 L108 173 L100 177 L92 173 L96 179 L90 183 Z" fill="#C9A84C"/>
+</svg>

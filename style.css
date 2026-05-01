@@ -176,6 +176,12 @@ ul { list-style: none; }
   gap: 12px;
   flex-shrink: 0;
 }
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo-name  { font-size: 1.1rem; font-weight: 800; letter-spacing: 0.12em; color: var(--white); }
 .logo-sub   { font-size: 0.6rem; letter-spacing: 0.2em; color: var(--gold); }
@@ -821,6 +827,64 @@ a.contact-value:hover { color: var(--gold); }
 }
 
 /* ============================================================
+   EMAIL INTEGRATION
+   ============================================================ */
+
+/* Email contact card */
+.contact-item--email {
+  display: flex;
+  text-decoration: none;
+  border-color: rgba(201,168,76,0.25);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.contact-item--email:hover {
+  border-color: rgba(201,168,76,0.6);
+  background: rgba(201,168,76,0.07);
+  transform: translateX(4px);
+}
+.contact-icon-wrap--email {
+  background: rgba(201,168,76,0.12);
+  border-color: rgba(201,168,76,0.3);
+}
+.contact-item--email:hover .contact-icon-wrap--email {
+  background: rgba(201,168,76,0.22);
+  border-color: rgba(201,168,76,0.7);
+}
+
+.email-badge {
+  margin-left: auto;
+  align-self: center;
+  flex-shrink: 0;
+  background: rgba(201,168,76,0.15);
+  color: #C9A84C;
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 50px;
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  animation: emailPulse 2.5s ease-in-out infinite;
+}
+@keyframes emailPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.3); }
+  50%      { box-shadow: 0 0 0 6px rgba(201,168,76,0); }
+}
+
+/* Email submit button */
+.btn-email {
+  background: linear-gradient(135deg, #C9A84C, #B8953A);
+  color: #0B1A2E;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+}
+.btn-email:hover {
+  background: linear-gradient(135deg, #D4B55A, #C9A84C);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201,168,76,0.5);
+}
+
+/* ============================================================
    WHATSAPP INTEGRATION
    ============================================================ */
 
@@ -878,6 +942,60 @@ a.contact-value:hover { color: var(--gold); }
   box-shadow: 0 8px 28px rgba(37,211,102,0.5);
 }
 
-@media (max-width: 480px) {
-  .wa-badge { display: none; }
+/* Contact method options */
+.contact-method-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contact-method-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(201,168,76,0.2);
+  border-radius: 8px;
+  transition: var(--transition);
+  background: rgba(201,168,76,0.05);
+}
+
+.contact-method-option:hover {
+  border-color: rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.1);
+}
+
+.contact-method-option input[type="radio"] {
+  display: none;
+}
+
+.contact-method-option input[type="radio"]:checked + .option-label {
+  color: #C9A84C;
+  font-weight: 600;
+}
+
+.contact-method-option input[type="radio"]:checked ~ * {
+  border-color: #C9A84C;
+  background: rgba(201,168,76,0.1);
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.contact-method-option input[type="radio"]:checked + .option-label {
+  color: #C9A84C;
+}
+
+@media (max-width: 768px) {
+  .contact-method-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

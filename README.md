@@ -11,16 +11,18 @@ The website is designed with a modern luxury aesthetic, featuring a deep navy an
 - **Responsive Design:** Looks great on desktop, tablet, and mobile devices.
 - **Scroll Animations:** Elements fade and slide in smoothly as you scroll down the page.
 - **Service Showcase:** Highlights key services (House Planning, Renovating, Roof Designing, Painting) with dedicated custom images.
-- **WhatsApp Integration:** 
-  - A dedicated WhatsApp contact card for instant messaging.
-  - The contact form automatically compiles user inputs (Name, Phone, Email, Service, Message) and opens a pre-filled WhatsApp chat directly with the business.
-- **No Build Step Required:** It's a pure HTML/CSS/JS static site. Just open `index.html` in your browser.
+- **Smart Contact System:**
+  - **PHP Email Integration:** Server-side email delivery when PHP is available
+  - **Automatic Fallback:** Falls back to mailto links if PHP is not configured
+  - **WhatsApp Integration:** Opens pre-filled WhatsApp chat for instant messaging
+- **No Build Step Required:** Works as static site with optional PHP enhancement
 
 ## 📁 Project Structure
 
 - `index.html`: The main structural layout of the single-page website.
+- `contact.php`: PHP backend for processing contact form submissions and sending emails.
 - `style.css`: All styling, CSS variables, typography, flex/grid layouts, and responsive media queries.
-- `main.js`: Handles navbar scroll effects, mobile menu toggling, intersection observers for scroll animations, and the WhatsApp form submission logic.
+- `main.js`: Handles navbar scroll effects, mobile menu toggling, intersection observers for scroll animations, and form validation.
 - **Images:**
   - `hero.png`: The stunning luxury home background for the hero section.
   - `svc_planning.png`: Image for the House Planning service.
@@ -40,14 +42,54 @@ The website is designed with a modern luxury aesthetic, featuring a deep navy an
 
 ## 🛠️ How to Use
 
+### Basic Static Version (Always Works)
 1. Download or clone this repository to your local machine.
 2. Ensure all image files (`.png`), `index.html`, `style.css`, and `main.js` are in the same folder.
 3. Double-click `index.html` to open it in your default web browser.
+4. **Contact form automatically falls back to email client** if PHP is not available.
+
+### Enhanced Version with PHP Email (Recommended)
+To enable actual email delivery from the contact form:
+
+#### Option 1: Local PHP Server
+1. Install PHP on your system (download from php.net)
+2. Navigate to the project folder in terminal/command prompt
+3. Run: `php -S localhost:8000`
+4. Open `http://localhost:8000` in your browser
+5. **Contact form sends real emails** to marcusmutonyi44@gmail.com
+
+#### Option 2: XAMPP/WAMP (Easiest for Windows)
+1. Download and install XAMPP (https://www.apachefriends.org/)
+2. Place the project folder in the `htdocs` directory
+3. Start Apache server from the XAMPP control panel
+4. Open `http://localhost/Anaiah Enterprise` in your browser
+5. **Contact form sends real emails** to marcusmutonyi44@gmail.com
+
+#### Option 3: Web Hosting (Production)
+Upload all files to a PHP-enabled web hosting service like Hostinger, Bluehost, or SiteGround.
+
+### Automatic Fallback
+- **With PHP:** Form sends actual emails via server
+- **Without PHP:** Form opens user's email client with pre-filled message
+- **WhatsApp:** Always works regardless of PHP availability
 
 ## 📞 Contact Configuration
 
-The contact form is currently configured to send messages to the WhatsApp number: **+260 971 627 899**. 
-To change this number, open `main.js` and update the `WA_NUMBER` constant at line 63.
+The contact form supports two contact methods:
+
+### Email Configuration
+- **Recipient:** mututwas@gmail.com
+- **Method:** PHP mail() function for server-side email delivery
+- **Form Action:** Submits to `contact.php` for processing
+
+### WhatsApp Configuration
+- **Number:** +260 971 627 899
+- **Method:** Opens pre-filled WhatsApp chat in new tab
+
+### Customization
+To change contact details:
+- **Email:** Update the `$recipient_email` variable in `contact.php`
+- **WhatsApp:** Update the `WA_NUMBER` constant in `main.js` (line 63)
 
 ---
 *We Plan. We Design. We Build. - Anaiah Enterprise*
