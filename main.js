@@ -104,7 +104,39 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
-  // Show loading state
+  const contactMethod = form.querySelector('input[name="contactMethod"]:checked').value;
+  const phone = form.querySelector('#phone').value.trim();
+  const email = form.querySelector('#email').value.trim();
+  const service = form.querySelector('#service');
+  const serviceLabel = service.options[service.selectedIndex].text;
+  const message = form.querySelector('#message').value.trim();
+
+  // Handle WhatsApp entirely on the client so it works even on static hosts
+  if (contactMethod === 'whatsapp') {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.querySelector('span').textContent = 'Opening WhatsApp…';
+    submitBtn.style.opacity = '0.75';
+
+    let text = `Hello Anaiah Enterprise! 👋\n\n`;
+    text += `*Name:* ${name}\n`;
+    if (phone) text += `*Phone:* ${phone}\n`;
+    if (email) text += `*Email:* ${email}\n`;
+    if (service.value) text += `*Service:* ${serviceLabel}\n`;
+    if (message) text += `\n*Message:*\n${message}`;
+
+    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+    setTimeout(() => {
+      window.open(url, '_blank', 'noopener,noreferrer');
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.querySelector('span').textContent = 'Send via WhatsApp';
+      submitBtn.style.opacity = '1';
+    }, 600);
+    return;
+  }
+
+  // Show loading state for email submissions
   submitBtn.disabled = true;
   submitBtn.querySelector('span').textContent = 'Sending...';
   submitBtn.style.opacity = '0.75';
@@ -128,56 +160,24 @@ form.addEventListener('submit', async (e) => {
   // Fallback to mailto if PHP is not available
   e.preventDefault();
 
-  const contactMethod = form.querySelector('input[name="contactMethod"]:checked').value;
-  const phone = form.querySelector('#phone').value.trim();
-  const email = form.querySelector('#email').value.trim();
-  const service = form.querySelector('#service');
-  const serviceLabel = service.options[service.selectedIndex].text;
-  const message = form.querySelector('#message').value.trim();
+  let subject = `Project Inquiry from ${name} - Anaiah Enterprise`;
+  let body = `Hello Anaiah Enterprise!\n\n`;
+  body += `Name: ${name}\n`;
+  if (phone) body += `Phone: ${phone}\n`;
+  if (email) body += `Email: ${email}\n`;
+  if (service.value) body += `Service: ${serviceLabel}\n`;
+  if (message) body += `\nMessage:\n${message}`;
 
-  if (contactMethod === 'email') {
-    // Build the email content
-    let subject = `Project Inquiry from ${name} - Anaiah Enterprise`;
-    let body = `Hello Anaiah Enterprise!\n\n`;
-    body += `Name: ${name}\n`;
-    if (phone) body += `Phone: ${phone}\n`;
-    if (email) body += `Email: ${email}\n`;
-    if (service.value) body += `Service: ${serviceLabel}\n`;
-    if (message) body += `\nMessage:\n${message}`;
+  submitBtn.querySelector('span').textContent = 'Opening Email…';
 
-    submitBtn.querySelector('span').textContent = 'Opening Email…';
-
-    // Open email client
-    const url = `mailto:marcusmutonyi44@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setTimeout(() => {
-      window.location.href = url;
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.querySelector('span').textContent = 'Send via Email';
-      submitBtn.style.opacity = '1';
-    }, 600);
-
-  } else if (contactMethod === 'whatsapp') {
-    // Build the WhatsApp message
-    let text = `Hello Anaiah Enterprise! 👋\n\n`;
-    text += `*Name:* ${name}\n`;
-    if (phone) text += `*Phone:* ${phone}\n`;
-    if (email) text += `*Email:* ${email}\n`;
-    if (service.value) text += `*Service:* ${serviceLabel}\n`;
-    if (message) text += `\n*Message:*\n${message}`;
-
-    submitBtn.querySelector('span').textContent = 'Opening WhatsApp…';
-
-    // Open WhatsApp
-    const url = `https://wa.me/260971627899?text=${encodeURIComponent(text)}`;
-    setTimeout(() => {
-      window.open(url, '_blank', 'noopener,noreferrer');
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.querySelector('span').textContent = 'Send via WhatsApp';
-      submitBtn.style.opacity = '1';
-    }, 600);
-  }
+  const url = `mailto:marcusmutonyi44@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  setTimeout(() => {
+    window.location.href = url;
+    form.reset();
+    submitBtn.disabled = false;
+    submitBtn.querySelector('span').textContent = 'Send via Email';
+    submitBtn.style.opacity = '1';
+  }, 600);
 });
 
 function shakeField(field) {
